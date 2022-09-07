@@ -9,11 +9,11 @@ This repo includes Twilio APIs as downloadable Postman Collections.
 
 ## Instructions
 
-1. Download one or more of the [Postman Collections](#postman-collections) below.
-2. [Import the collection to Postman](#import-to-postman).
-3. Set your [Environment Variables](#set-environment-variables).
+1. Download a Postman Collection below.
+2. Import the collection to Postman.
+3. Set your Environment Variables.
 
-## 1. Postman Collections
+## 1. Download Postman Collection
 
 Click one of the links below to download the Postman Collection.
 
