@@ -13,31 +13,31 @@ This repo includes Twilio APIs as downloadable Postman Collections.
 2. [Import the collection to Postman](#import-to-postman).
 3. Set your [Environment Variables](#set-environment-variables).
 
-## Postman Collections
+## 1. Postman Collections
 
-Click one of the links below to view the Swagger Doc.
+Click one of the links below to download the Postman Collection.
 
-| Postman Collection                                                                                                           | Description                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| [Twilio - API](https://github.com/johnchaffee/twilio-postman/blob/main/Twilio%20-%20API.postman_collection.json)                | Send messages and manage accounts and phone numbers |
-| [Twilio - Lookups](https://github.com/johnchaffee/twilio-postman/blob/main/Twilio%20-%20API.postman_collection.json)            | Validate Phone Number formats and types             |
-| [Twilio - Verify](https://github.com/johnchaffee/twilio-postman/blob/main/Twilio%20-%20API.postman_collection.json)             | Send and validate one-time-passcodes                |
-| [Twilio - Messaging Services](https://github.com/johnchaffee/twilio-postman/blob/main/Twilio%20-%20API.postman_collection.json) | Manage Messaging Services and Number Pools          |
-| [Twilio - Conversations](https://github.com/johnchaffee/twilio-postman/blob/main/Twilio%20-%20API.postman_collection.json)      | Manage 2-way human-to-human conversations           |
+| Postman Collection                                                                    | Description                                         |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| [Twilio - API](./collections/Twilio%20-%20API.postman_collection.json)                | Send messages and manage accounts and phone numbers |
+| [Twilio - Lookups](./collections/Twilio%20-%20API.postman_collection.json)            | Validate Phone Number formats and types             |
+| [Twilio - Verify](./collections/Twilio%20-%20API.postman_collection.json)             | Send and validate one-time-passcodes                |
+| [Twilio - Messaging Services](./collections/Twilio%20-%20API.postman_collection.json) | Manage Messaging Services and Number Pools          |
+| [Twilio - Conversations](./collections/Twilio%20-%20API.postman_collection.json)      | Manage 2-way human-to-human conversations           |
 
-## Import to Postman
+## 2. Import to Postman
 
 Launch Postman and click Import.
 
 ![Import button](./images/import-button.png)
 
-Then click the Upload Files button and select one of the Collection files you downloaded in step 1.
+Then click the Upload Files button and select the Collection file you downloaded.
 
 ![Import dialog](./images/import-dialog.png)
 
-## Set Environment Variables
+## 3. Set Environment Variables
 
-Select the Environments tab on the left, select an environment such as `Globals`, then create two variables with the following Variable name and Current Value:
+Select the Environments tab on the left, select an environment such as `Globals`, then create two variables with the following values:
 
 | Variable   | Type    | Initial Value | Current Value              |
 | ---------- | ------- | ------------- | -------------------------- |
@@ -47,11 +47,7 @@ Select the Environments tab on the left, select an environment such as `Globals`
 You can find your Twilio `AccountSid` and `AuthToken` in the [Twilio Console](https://console.twilio.com).
 
 ![Environment Variables](./images/env-variables.png)
-![Environment Variables](../images/env-variables.png)
-![Environment Variables](../../images/env-variables.png)
-![Environment Variables](../../../images/env-variables.png)
-![Environment Variables](../../images/env-variables.png)
-![Environment Variables](../../../images/env-variables.png)
-![Environment Variables](../blob/main/images/env-variables.png)
-![Environment Variables](../../blob/main/images/env-variables.png)
-![Environment Variables](../../../blob/main/images/env-variables.png)
+
+## Start using the APIs!
+
+That's it. You can now experiment with the Twilio APIs using Postman.
