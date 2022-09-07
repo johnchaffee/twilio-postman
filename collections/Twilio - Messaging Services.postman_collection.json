@@ -1,0 +1,3925 @@
+{
+	"info": {
+		"_postman_id": "359558bb-6555-4ab5-941e-b645e60c6c87",
+		"name": "Twilio - Messaging Services",
+		"description": "This is the public Twilio REST API.\n\nContact Support:\n Name: Twilio Support\n Email: support@twilio.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1060316"
+	},
+	"item": [
+		{
+			"name": "AlphaSenders",
+			"item": [
+				{
+					"name": "Create Alpha Sender",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "AlphaSender",
+									"value": "in",
+									"description": "(Required) The Alphanumeric Sender ID string. Can be up to 11 characters long. Valid characters are A-Z, a-z, 0-9, space, hyphen `-`, plus `+`, underscore `_` and ampersand `&`. This value cannot contain only numbers."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-AlphaSenders-Url}}/v1/Services/:ServiceSid/AlphaSenders",
+							"host": [
+								"{{v1-Services-ServiceSid-AlphaSenders-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"AlphaSenders"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "AlphaSender",
+											"value": "in",
+											"description": "(Required) The Alphanumeric Sender ID string. Can be up to 11 characters long. Valid characters are A-Z, a-z, 0-9, space, hyphen `-`, plus `+`, underscore `_` and ampersand `&`. This value cannot contain only numbers."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-AlphaSenders-Url}}/v1/Services/:ServiceSid/AlphaSenders",
+									"host": [
+										"{{v1-Services-ServiceSid-AlphaSenders-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"AlphaSenders"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under."
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"AI75eFFCB4e4BfBCc884E5a9bCDef4feF3\",\n  \"account_sid\": \"ACdAf49568dD73ba3FAf9CE1D18B2Ab9b6\",\n  \"service_sid\": \"MG79b625B8dDA0ecBDB8de946B6488D49E\",\n  \"date_created\": \"1990-10-28T22:30:16.913Z\",\n  \"date_updated\": \"2004-01-10T18:03:15.138Z\",\n  \"alpha_sender\": \"dolor laboris velit consectetur\",\n  \"capabilities\": [\n    \"laboris irure tempor\",\n    \"eiusmod eu ullamco\"\n  ],\n  \"url\": \"https://OOCQDSVd.jrPwGbDuR1rwq7DkH9WPy,L,Gg6+mj\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Alpha Sender",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-AlphaSenders-Url}}/v1/Services/:ServiceSid/AlphaSenders",
+							"host": [
+								"{{v1-Services-ServiceSid-AlphaSenders-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"AlphaSenders"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "89",
+									"description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-AlphaSenders-Url}}/v1/Services/:ServiceSid/AlphaSenders?PageSize=89",
+									"host": [
+										"{{v1-Services-ServiceSid-AlphaSenders-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"AlphaSenders"
+									],
+									"query": [
+										{
+											"key": "PageSize",
+											"value": "89"
+										}
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"alpha_senders\": [\n    {\n      \"sid\": \"AI37F454ff5504BBAcb200aDeB0Ebdd9eB\",\n      \"account_sid\": \"ACcF34AF57A6A52Aa9CbD184AEfa20c542\",\n      \"service_sid\": \"MGD21d827be6A82Ed79106D26A9A12bA0d\",\n      \"date_created\": \"1959-06-03T06:22:46.047Z\",\n      \"date_updated\": \"1995-02-10T11:29:26.164Z\",\n      \"alpha_sender\": \"sed enim\",\n      \"capabilities\": [\n        \"nostrud magna dolor\",\n        \"eiusmod voluptate consequat amet\"\n      ],\n      \"url\": \"https://RQBtL.cpeR7uqI4mzp6igFa1.AbgG\"\n    },\n    {\n      \"sid\": \"AI9AC0cE65dca8Dc82f2ad8b6515D5332a\",\n      \"account_sid\": \"AC67f58E4eDd82BfFE799FADa563Bd0cDf\",\n      \"service_sid\": \"MG2c9f961FeeAfcDCdbFB3eCAdE5DD8DB1\",\n      \"date_created\": \"1993-08-01T20:15:07.123Z\",\n      \"date_updated\": \"1987-04-02T12:48:59.863Z\",\n      \"alpha_sender\": \"dolor aliqua minim\",\n      \"capabilities\": [\n        \"ipsum voluptate ut consectetur amet\",\n        \"reprehenderit irure\"\n      ],\n      \"url\": \"https://xlHdGhNppxfTXOZBfBOMwpDIHnD.dcdbVIyClw\"\n    }\n  ],\n  \"meta\": {\n    \"first_page_url\": \"https://hjxFhrHiQUIyhGXkNCvKRuvVwmOMRp.rryztTC+QwTBRaijoPznz8bTep73VJd5YrSPWRhwOZLx60LZwKgUk5vL-xY\",\n    \"next_page_url\": \"https://DMELCbqdIoQqRwUDXpUcIDj.wcNF5V7h4,Iwduvl1gHNyQLXjJ5SsCK7f1pcBOUwFQfln,y1Wuus2S\",\n    \"page\": 21234702,\n    \"page_size\": 46066756,\n    \"previous_page_url\": \"http://TKVIKPKcDhTKuTnTK.cnd0a0lsbZ7FUTPcH8jEhHZ\",\n    \"url\": \"https://QeEnMCvwfTJRTtUQV.zjgtGtRy\",\n    \"key\": \"aute veniam cillum\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Alpha Sender",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}/v1/Services/:ServiceSid/AlphaSenders/:Sid",
+							"host": [
+								"{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"AlphaSenders",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "amet magna elit",
+									"description": "(Required) The SID of the AlphaSender resource to fetch."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}/v1/Services/:ServiceSid/AlphaSenders/:Sid",
+									"host": [
+										"{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"AlphaSenders",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "amet magna elit",
+											"description": "(Required) The SID of the AlphaSender resource to fetch."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"AIAF6d3fdD7aAcEf4ca8EcbE5EaAbAA356\",\n  \"account_sid\": \"ACdDfCb1c2a039F0AebC398D55EaEbCf6B\",\n  \"service_sid\": \"MGfa0EfEd4a3E73D99a26c00c44d00ac5C\",\n  \"date_created\": \"1994-01-02T23:40:42.362Z\",\n  \"date_updated\": \"1973-03-25T04:08:10.753Z\",\n  \"alpha_sender\": \"et fugiat\",\n  \"capabilities\": [\n    \"sed nostrud ex consectetur\",\n    \"qui laboris ut do\"\n  ],\n  \"url\": \"http://aPkLNqsJWqgsEHBy.dbjMUOIXuPDxC9BjBqcjMRoKsvp35tk-xhSw+9K4BYXZ2\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Alpha Sender",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}/v1/Services/:ServiceSid/AlphaSenders/:Sid",
+							"host": [
+								"{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"AlphaSenders",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "amet magna elit",
+									"description": "(Required) The SID of the AlphaSender resource to delete."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "The resource was deleted successfully.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}/v1/Services/:ServiceSid/AlphaSenders/:Sid",
+									"host": [
+										"{{v1-Services-ServiceSid-AlphaSenders-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"AlphaSenders",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "amet magna elit",
+											"description": "(Required) The SID of the AlphaSender resource to delete."
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Brand Registrations",
+			"item": [
+				{
+					"name": "Fetch Brand Registrations",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-a2p-BrandRegistrations-Sid-Url}}/v1/a2p/BrandRegistrations/:Sid",
+							"host": [
+								"{{v1-a2p-BrandRegistrations-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"a2p",
+								"BrandRegistrations",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "Sid",
+									"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+									"description": "(Required) The SID of the Brand Registration resource to fetch."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-a2p-BrandRegistrations-Sid-Url}}/v1/a2p/BrandRegistrations/:Sid",
+									"host": [
+										"{{v1-a2p-BrandRegistrations-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"a2p",
+										"BrandRegistrations",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "Sid",
+											"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+											"description": "(Required) The SID of the Brand Registration resource to fetch."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"BNCEFA18179Aaf767fd9F7CaCcbE9E5E21\",\n  \"account_sid\": \"AC18F9E28EEbcBBdDA8a9FDbF8dCDe23F9\",\n  \"customer_profile_bundle_sid\": \"BU285855f4FdBd23FD43a1e0debE77eb5D\",\n  \"a2p_profile_bundle_sid\": \"BU99C4dA0940c358F7Fdc5CeB5d84Aff6c\",\n  \"date_created\": \"1987-12-26T23:36:56.525Z\",\n  \"date_updated\": \"1975-10-26T01:00:15.467Z\",\n  \"brand_type\": \"dolor deserunt\",\n  \"status\": \"DELETED\",\n  \"tcr_id\": \"nostrud consequat veniam culpa\",\n  \"failure_reason\": \"veniam\",\n  \"url\": \"http://ZXHbGThgIktzRGFCgliMtJloGkNbwgMMx.bmlA4P4qsowFrsE.Wao50YrJrA.At\",\n  \"brand_score\": 91051971,\n  \"brand_feedback\": [\n    \"STOCK_SYMBOL\",\n    \"OTHERS\"\n  ],\n  \"identity_status\": \"UNVERIFIED\",\n  \"russell_3000\": true,\n  \"government_entity\": true,\n  \"tax_exempt_status\": \"officia ullamco irure tempor\",\n  \"skip_automatic_sec_vet\": true,\n  \"mock\": false,\n  \"links\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Brand Registrations",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-a2p-BrandRegistrations-Sid-Url}}/v1/a2p/BrandRegistrations/:Sid",
+							"host": [
+								"{{v1-a2p-BrandRegistrations-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"a2p",
+								"BrandRegistrations",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "Sid",
+									"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+									"description": "(Required) The SID of the Brand Registration resource to update."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Accepted",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-a2p-BrandRegistrations-Sid-Url}}/v1/a2p/BrandRegistrations/:Sid",
+									"host": [
+										"{{v1-a2p-BrandRegistrations-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"a2p",
+										"BrandRegistrations",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "Sid",
+											"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+											"description": "(Required) The SID of the Brand Registration resource to update."
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"BN7Fa0D9251bAb7Cc5dF0b27d9B4E9416d\",\n  \"account_sid\": \"ACC3bdcF1c2ACa6c669214e13A3bC99B1C\",\n  \"customer_profile_bundle_sid\": \"BUD83e0bbfF2A0cCd3efB6A57b83fd73ed\",\n  \"a2p_profile_bundle_sid\": \"BUABb731dcaE5865B9F07EEBDaD07AebA6\",\n  \"date_created\": \"1979-03-07T07:56:02.594Z\",\n  \"date_updated\": \"1986-03-03T01:12:21.292Z\",\n  \"brand_type\": \"qui nulla\",\n  \"status\": \"PENDING\",\n  \"tcr_id\": \"eiusmod consectetur consequat deserunt\",\n  \"failure_reason\": \"culpa ut\",\n  \"url\": \"https://VAeXKlTyZvwn.ccbQJvqvIgCbdZ+MjhhSiTATkanURf3MgL7g\",\n  \"brand_score\": 43392841,\n  \"brand_feedback\": [\n    \"OTHERS\",\n    \"STOCK_SYMBOL\"\n  ],\n  \"identity_status\": \"VETTED_VERIFIED\",\n  \"russell_3000\": true,\n  \"government_entity\": true,\n  \"tax_exempt_status\": \"aute dolore in et aliqua\",\n  \"skip_automatic_sec_vet\": true,\n  \"mock\": false,\n  \"links\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "List Brand Registrations",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-a2p-BrandRegistrations-Url}}/v1/a2p/BrandRegistrations",
+							"host": [
+								"{{v1-a2p-BrandRegistrations-Url}}"
+							],
+							"path": [
+								"v1",
+								"a2p",
+								"BrandRegistrations"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "89",
+									"description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-a2p-BrandRegistrations-Url}}/v1/a2p/BrandRegistrations?PageSize=89",
+									"host": [
+										"{{v1-a2p-BrandRegistrations-Url}}"
+									],
+									"path": [
+										"v1",
+										"a2p",
+										"BrandRegistrations"
+									],
+									"query": [
+										{
+											"key": "PageSize",
+											"value": "89"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"sid\": \"BN89A122BAF7856F9fBA0fcFeD3f3a283d\",\n      \"account_sid\": \"AC0c0bBecF7D09591af6F2f5574aAFb749\",\n      \"customer_profile_bundle_sid\": \"BUFeB7DBbAA3CDb1ccfd314cFAeB781781\",\n      \"a2p_profile_bundle_sid\": \"BU3fe56CDb93EF3e8caBaFAf8c497f2EC7\",\n      \"date_created\": \"1971-02-14T22:55:54.111Z\",\n      \"date_updated\": \"1994-05-16T12:52:52.923Z\",\n      \"brand_type\": \"sunt pariatur\",\n      \"status\": \"IN_REVIEW\",\n      \"tcr_id\": \"nisi\",\n      \"failure_reason\": \"labore\",\n      \"url\": \"http://NiSuIIFOPUhcsJCAwLiGQ.mzkO,bR253ScPMOY8VQu\",\n      \"brand_score\": -82126991,\n      \"brand_feedback\": [\n        \"NONPROFIT\",\n        \"STOCK_SYMBOL\"\n      ],\n      \"identity_status\": \"VETTED_VERIFIED\",\n      \"russell_3000\": false,\n      \"government_entity\": true,\n      \"tax_exempt_status\": \"nisi dolor\",\n      \"skip_automatic_sec_vet\": true,\n      \"mock\": true,\n      \"links\": {}\n    },\n    {\n      \"sid\": \"BNd8FaBa80FD1DDc0f1a8Dd8a15dcE6A2c\",\n      \"account_sid\": \"AC44F4a6ABAEB79D2dB353adA722346d18\",\n      \"customer_profile_bundle_sid\": \"BU8B6C7Aa7AfECcB28Cd79509CD4f40683\",\n      \"a2p_profile_bundle_sid\": \"BUeB30C2F09Dd85Cd643e1BE0FC62Ab7c4\",\n      \"date_created\": \"1958-06-22T06:12:50.094Z\",\n      \"date_updated\": \"2009-11-22T15:23:37.251Z\",\n      \"brand_type\": \"est esse\",\n      \"status\": \"PENDING\",\n      \"tcr_id\": \"et consequat\",\n      \"failure_reason\": \"fugiat sint irure\",\n      \"url\": \"http://iwRGyxBNoQ.sqiJIZL1.XoF61j\",\n      \"brand_score\": -79872397,\n      \"brand_feedback\": [\n        \"NONPROFIT\",\n        \"OTHERS\"\n      ],\n      \"identity_status\": \"VERIFIED\",\n      \"russell_3000\": false,\n      \"government_entity\": false,\n      \"tax_exempt_status\": \"in deserunt mollit ex proident\",\n      \"skip_automatic_sec_vet\": false,\n      \"mock\": false,\n      \"links\": {}\n    }\n  ],\n  \"meta\": {\n    \"first_page_url\": \"http://lOa.lmJNiOnpvdP4F5gzSiYoDNp0CP5Zxnu6NVig77weCFYFXC2FDT,J2VhL\",\n    \"next_page_url\": \"http://tLlMOTWAyHsStEOnk.klJWIDNLBcqvwtcSCcsGPeWN3DUMOMlsZM7g-GAonPonFL-U.Hy4gWzLRja,tmmv-,BVCtFVJuO\",\n    \"page\": 20411230,\n    \"page_size\": -7756840,\n    \"previous_page_url\": \"http://YrLXsAoNPUWGjQ.otGMHtSD,JPHhQQW1aCAqMM+mwqrYdL+GoxQpcyzAgpLBMXGmOPLSYgAUlMSA3FD+Y\",\n    \"url\": \"http://NepZCjnqnSHCsAohB.wnstsU,3vAcQLM9qcaiN\",\n    \"key\": \"proident in aute\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Brand Registrations",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "CustomerProfileBundleSid",
+									"value": "BUAAfDAc4962cB4B367A12B37F0ee60b5C",
+									"description": "(Required) Customer Profile Bundle Sid."
+								},
+								{
+									"key": "A2PProfileBundleSid",
+									"value": "BU3d34A25E0ecB2c6Db551Aee6bae50eed",
+									"description": "(Required) A2P Messaging Profile Bundle Sid."
+								},
+								{
+									"key": "BrandType",
+									"value": "elit eiusmod commodo eu",
+									"description": "Type of brand being created. One of: \"STANDARD\", \"STARTER\". STARTER is for low volume, starter use cases. STANDARD is for all other use cases.",
+									"disabled": true
+								},
+								{
+									"key": "Mock",
+									"value": "false",
+									"description": "A boolean that specifies whether brand should be a mock or not. If true, brand will be registered as a mock brand. Defaults to false if no value is provided.",
+									"disabled": true
+								},
+								{
+									"key": "SkipAutomaticSecVet",
+									"value": "true",
+									"description": "A flag to disable automatic secondary vetting for brands which it would otherwise be done.",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-a2p-BrandRegistrations-Url}}/v1/a2p/BrandRegistrations",
+							"host": [
+								"{{v1-a2p-BrandRegistrations-Url}}"
+							],
+							"path": [
+								"v1",
+								"a2p",
+								"BrandRegistrations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "CustomerProfileBundleSid",
+											"value": "BUAAfDAc4962cB4B367A12B37F0ee60b5C",
+											"description": "(Required) Customer Profile Bundle Sid."
+										},
+										{
+											"key": "A2PProfileBundleSid",
+											"value": "BU3d34A25E0ecB2c6Db551Aee6bae50eed",
+											"description": "(Required) A2P Messaging Profile Bundle Sid."
+										},
+										{
+											"key": "BrandType",
+											"value": "elit eiusmod commodo eu",
+											"description": "Type of brand being created. One of: \"STANDARD\", \"STARTER\". STARTER is for low volume, starter use cases. STANDARD is for all other use cases.",
+											"disabled": true
+										},
+										{
+											"key": "Mock",
+											"value": "false",
+											"description": "A boolean that specifies whether brand should be a mock or not. If true, brand will be registered as a mock brand. Defaults to false if no value is provided.",
+											"disabled": true
+										},
+										{
+											"key": "SkipAutomaticSecVet",
+											"value": "true",
+											"description": "A flag to disable automatic secondary vetting for brands which it would otherwise be done.",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-a2p-BrandRegistrations-Url}}/v1/a2p/BrandRegistrations",
+									"host": [
+										"{{v1-a2p-BrandRegistrations-Url}}"
+									],
+									"path": [
+										"v1",
+										"a2p",
+										"BrandRegistrations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"BN7Fa0D9251bAb7Cc5dF0b27d9B4E9416d\",\n  \"account_sid\": \"ACC3bdcF1c2ACa6c669214e13A3bC99B1C\",\n  \"customer_profile_bundle_sid\": \"BUD83e0bbfF2A0cCd3efB6A57b83fd73ed\",\n  \"a2p_profile_bundle_sid\": \"BUABb731dcaE5865B9F07EEBDaD07AebA6\",\n  \"date_created\": \"1979-03-07T07:56:02.594Z\",\n  \"date_updated\": \"1986-03-03T01:12:21.292Z\",\n  \"brand_type\": \"qui nulla\",\n  \"status\": \"PENDING\",\n  \"tcr_id\": \"eiusmod consectetur consequat deserunt\",\n  \"failure_reason\": \"culpa ut\",\n  \"url\": \"https://VAeXKlTyZvwn.ccbQJvqvIgCbdZ+MjhhSiTATkanURf3MgL7g\",\n  \"brand_score\": 43392841,\n  \"brand_feedback\": [\n    \"OTHERS\",\n    \"STOCK_SYMBOL\"\n  ],\n  \"identity_status\": \"VETTED_VERIFIED\",\n  \"russell_3000\": true,\n  \"government_entity\": true,\n  \"tax_exempt_status\": \"aute dolore in et aliqua\",\n  \"skip_automatic_sec_vet\": true,\n  \"mock\": false,\n  \"links\": {}\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vettings",
+			"item": [
+				{
+					"name": "Create Brand Vetting",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "VettingProvider",
+									"value": "campaign-verify",
+									"description": "(Required) The third-party provider of the vettings to create ."
+								},
+								{
+									"key": "VettingId",
+									"value": "id nisi pariatur",
+									"description": "The unique ID of the vetting",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}/v1/a2p/BrandRegistrations/:BrandSid/Vettings",
+							"host": [
+								"{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}"
+							],
+							"path": [
+								"v1",
+								"a2p",
+								"BrandRegistrations",
+								":BrandSid",
+								"Vettings"
+							],
+							"variable": [
+								{
+									"key": "BrandSid",
+									"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+									"description": "(Required) The SID of the Brand Registration resource of the vettings to create ."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "VettingProvider",
+											"value": "campaign-verify",
+											"description": "(Required) The third-party provider of the vettings to create ."
+										},
+										{
+											"key": "VettingId",
+											"value": "id nisi pariatur",
+											"description": "The unique ID of the vetting",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}/v1/a2p/BrandRegistrations/:BrandSid/Vettings",
+									"host": [
+										"{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}"
+									],
+									"path": [
+										"v1",
+										"a2p",
+										"BrandRegistrations",
+										":BrandSid",
+										"Vettings"
+									],
+									"variable": [
+										{
+											"key": "BrandSid",
+											"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+											"description": "(Required) The SID of the Brand Registration resource of the vettings to create ."
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"account_sid\": \"AC0FD3D32DAE9ebD7e041E958950D894cA\",\n  \"brand_sid\": \"BNAf6Ad3DFFFAaaEf6CBC1eA01D55BAeda\",\n  \"brand_vetting_sid\": \"VT4Fdf7a19fDc0AB7fb73aBff0DbF2C6f0\",\n  \"date_updated\": \"2012-07-20T22:10:31.022Z\",\n  \"date_created\": \"1965-04-06T17:38:47.295Z\",\n  \"vetting_id\": \"pariatur laborum occaecat ea aute\",\n  \"vetting_class\": \"esse quis\",\n  \"vetting_status\": \"Duis sit laboris voluptate cup\",\n  \"vetting_provider\": \"campaign-verify\",\n  \"url\": \"http://elCPSbkLHqwngH.lnRwk+,YbGk0NR2vCCGDHHkkiejM8nfYQ9\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Brand Vetting",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}/v1/a2p/BrandRegistrations/:BrandSid/Vettings",
+							"host": [
+								"{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}"
+							],
+							"path": [
+								"v1",
+								"a2p",
+								"BrandRegistrations",
+								":BrandSid",
+								"Vettings"
+							],
+							"query": [
+								{
+									"key": "VettingProvider",
+									"value": "campaign-verify",
+									"description": "The third-party provider of the vettings to read",
+									"disabled": true
+								},
+								{
+									"key": "PageSize",
+									"value": "89",
+									"description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "BrandSid",
+									"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+									"description": "(Required) The SID of the Brand Registration resource of the vettings to read ."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}/v1/a2p/BrandRegistrations/:BrandSid/Vettings?VettingProvider=<string>&PageSize=89",
+									"host": [
+										"{{v1-a2p-BrandRegistrations-BrandSid-Vettings-Url}}"
+									],
+									"path": [
+										"v1",
+										"a2p",
+										"BrandRegistrations",
+										":BrandSid",
+										"Vettings"
+									],
+									"query": [
+										{
+											"key": "VettingProvider",
+											"value": "<string>"
+										},
+										{
+											"key": "PageSize",
+											"value": "89"
+										}
+									],
+									"variable": [
+										{
+											"key": "BrandSid",
+											"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+											"description": "(Required) The SID of the Brand Registration resource of the vettings to read ."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"account_sid\": \"ACbBA71AB2De99A88BC30FAF7c54ff08bc\",\n      \"brand_sid\": \"BNec5dA085f124C2a137CcBB2CCfC7eCC2\",\n      \"brand_vetting_sid\": \"VTdfF75dEC3A20Cb05a2A7e5162e2C9842\",\n      \"date_updated\": \"2005-05-16T07:24:18.057Z\",\n      \"date_created\": \"1970-02-10T18:34:29.524Z\",\n      \"vetting_id\": \"ess\",\n      \"vetting_class\": \"veniam ut incididunt sit\",\n      \"vetting_status\": \"aliqua et reprehenderit magna Lorem\",\n      \"vetting_provider\": \"<string>\",\n      \"url\": \"http://CvMAhMys.mbvl.P0lFXiKjHUxab+a1-QTmfqmeHV1nuLe7aZvobG6R6g9XnslENzGO44h\"\n    },\n    {\n      \"account_sid\": \"AC5f4fbECc4214BeFa35eD0cf1aBA0AfE1\",\n      \"brand_sid\": \"BN9dC8fDab184CE908796368bcB5bf9F50\",\n      \"brand_vetting_sid\": \"VTFAe8f1f4A4cBEDef7b3ddc6F05f07eB3\",\n      \"date_updated\": \"1943-09-21T15:47:57.314Z\",\n      \"date_created\": \"1957-07-07T06:21:38.020Z\",\n      \"vetting_id\": \"Lorem cupidatat consequat non\",\n      \"vetting_class\": \"Excepteur cillum adipisicing anim\",\n      \"vetting_status\": \"ut cupidatat\",\n      \"vetting_provider\": \"<string>\",\n      \"url\": \"http://PRezWQtWY.efM-y59M\"\n    }\n  ],\n  \"meta\": {\n    \"first_page_url\": \"https://mKpAyXHXYmvISeLKa.srheWjgQ6wUFJR\",\n    \"next_page_url\": \"https://iQAsQ.ouLTyYY-Y,WkJQDKhuzV8ogcypysV8hUruG5vo4ZFADDwBHiY\",\n    \"page\": -56041002,\n    \"page_size\": 83593965,\n    \"previous_page_url\": \"https://JipGoLhkygNjHhp.ijocYug1kqVeiwaVHY4Xj\",\n    \"url\": \"http://VHE.mnixECGZYS.garreMS32gyhKKCDcG18w1WvyCSEfNSTGXY.\",\n    \"key\": \"cupidatat eu tempor\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Brand Vetting",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-a2p-BrandRegistrations-BrandSid-Vettings-BrandVettingSid-Url}}/v1/a2p/BrandRegistrations/:BrandSid/Vettings/:BrandVettingSid",
+							"host": [
+								"{{v1-a2p-BrandRegistrations-BrandSid-Vettings-BrandVettingSid-Url}}"
+							],
+							"path": [
+								"v1",
+								"a2p",
+								"BrandRegistrations",
+								":BrandSid",
+								"Vettings",
+								":BrandVettingSid"
+							],
+							"variable": [
+								{
+									"key": "BrandSid",
+									"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+									"description": "(Required) The SID of the Brand Registration resource of the vettings to read ."
+								},
+								{
+									"key": "BrandVettingSid",
+									"value": "VT8dEF9afEdcBd6ED4CDEfeD05FAF5cCa0",
+									"description": "(Required) The Twilio SID of the third-party vetting record."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-a2p-BrandRegistrations-BrandSid-Vettings-BrandVettingSid-Url}}/v1/a2p/BrandRegistrations/:BrandSid/Vettings/:BrandVettingSid",
+									"host": [
+										"{{v1-a2p-BrandRegistrations-BrandSid-Vettings-BrandVettingSid-Url}}"
+									],
+									"path": [
+										"v1",
+										"a2p",
+										"BrandRegistrations",
+										":BrandSid",
+										"Vettings",
+										":BrandVettingSid"
+									],
+									"variable": [
+										{
+											"key": "BrandSid",
+											"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+											"description": "(Required) The SID of the Brand Registration resource of the vettings to read ."
+										},
+										{
+											"key": "BrandVettingSid",
+											"value": "VT8dEF9afEdcBd6ED4CDEfeD05FAF5cCa0",
+											"description": "(Required) The Twilio SID of the third-party vetting record."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"account_sid\": \"AC727473f823fF6fc5d10A6f5c3Cd8c9C0\",\n  \"brand_sid\": \"BNa5bcC4d9abfac7051BDADEad7fDBDdBA\",\n  \"brand_vetting_sid\": \"VT151c93f189377f6A7Bb50708fcfa4aA7\",\n  \"date_updated\": \"2012-05-01T11:07:03.626Z\",\n  \"date_created\": \"2021-04-13T15:22:51.224Z\",\n  \"vetting_id\": \"tempor ex quis id\",\n  \"vetting_class\": \"nisi\",\n  \"vetting_status\": \"lab\",\n  \"vetting_provider\": \"<string>\",\n  \"url\": \"http://sIW.thgbkOCVN,YB.QRY9MvL55yIjLEoyg6IG9IOptsfnLZyfGPmyBAtPrVMTAToR-Jt6zJC\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Deactivations",
+			"item": [
+				{
+					"name": "Fetch Deactivation",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Deactivations-Url}}/v1/Deactivations",
+							"host": [
+								"{{v1-Deactivations-Url}}"
+							],
+							"path": [
+								"v1",
+								"Deactivations"
+							],
+							"query": [
+								{
+									"key": "Date",
+									"value": "1956-09-30",
+									"description": "The request will return a list of all United States Phone Numbers that were deactivated on the day specified by this parameter. This date should be specified in YYYY-MM-DD format.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Fetch a list of all United States numbers that have been deactivated on a specific date."
+					},
+					"response": [
+						{
+							"name": "Temporary Redirect",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Deactivations-Url}}/v1/Deactivations?Date=1956-09-30",
+									"host": [
+										"{{v1-Deactivations-Url}}"
+									],
+									"path": [
+										"v1",
+										"Deactivations"
+									],
+									"query": [
+										{
+											"key": "Date",
+											"value": "1956-09-30"
+										}
+									]
+								}
+							},
+							"status": "Temporary Redirect (since HTTP/1.1)",
+							"code": 307,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"redirect_to\": \"https://AStAZZkejfys.ojCUAl45hOC05z+cCv4A6-rGPLXZHWg\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Preregistered US A2P",
+			"item": [
+				{
+					"name": "Create External Campaign",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "CampaignId",
+									"value": "labore Duis",
+									"description": "(Required) ID of the preregistered campaign."
+								},
+								{
+									"key": "MessagingServiceSid",
+									"value": "MG88541dfb931DD693EAbCC69A1cC88c0d",
+									"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) that the resource is associated with."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-Services-PreregisteredUsa2p-Url}}/v1/Services/PreregisteredUsa2p",
+							"host": [
+								"{{v1-Services-PreregisteredUsa2p-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								"PreregisteredUsa2p"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "CampaignId",
+											"value": "labore Duis",
+											"description": "(Required) ID of the preregistered campaign."
+										},
+										{
+											"key": "MessagingServiceSid",
+											"value": "MG88541dfb931DD693EAbCC69A1cC88c0d",
+											"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) that the resource is associated with."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-Services-PreregisteredUsa2p-Url}}/v1/Services/PreregisteredUsa2p",
+									"host": [
+										"{{v1-Services-PreregisteredUsa2p-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										"PreregisteredUsa2p"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"QEAD1d16b22DeB37bD1E6aBAfFDDaAD5Cd\",\n  \"account_sid\": \"AC6eFBF776BFCaB38e54aBCaB8BBA6ebc6\",\n  \"campaign_id\": \"ea velit officia fugiat\",\n  \"messaging_service_sid\": \"MGeDEebF9c948e2E2B91EcC24bEe0f01DF\",\n  \"date_created\": \"1986-06-29T12:50:00.513Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Phone Numbers",
+			"item": [
+				{
+					"name": "Create Phone Number",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "PhoneNumberSid",
+									"value": "PN4dF23DAc64C294f9D307Dc1b0f8CBBec",
+									"description": "(Required) The SID of the Phone Number being added to the Service."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Url}}/v1/Services/:ServiceSid/PhoneNumbers",
+							"host": [
+								"{{v1-Services-ServiceSid-PhoneNumbers-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"PhoneNumbers"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "PhoneNumberSid",
+											"value": "PN4dF23DAc64C294f9D307Dc1b0f8CBBec",
+											"description": "(Required) The SID of the Phone Number being added to the Service."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Url}}/v1/Services/:ServiceSid/PhoneNumbers",
+									"host": [
+										"{{v1-Services-ServiceSid-PhoneNumbers-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"PhoneNumbers"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under."
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"PNAb1A1Eef0a61A87fa828ff2BD73bfad2\",\n  \"account_sid\": \"ACA0648aC1bbC86f4D8ebb9aEFeC417Bba\",\n  \"service_sid\": \"MG715f7dfd56EdCc6cfbA36aAB7F4d7daE\",\n  \"date_created\": \"2007-12-25T21:14:56.526Z\",\n  \"date_updated\": \"2014-01-06T03:13:39.659Z\",\n  \"phone_number\": \"nulla ci\",\n  \"country_code\": \"ullamco qui ali\",\n  \"capabilities\": [\n    \"proident commodo nisi\",\n    \"esse ipsum sint aliquip\"\n  ],\n  \"url\": \"https://onMswCItHSbcrsgRRotooxSP.vgixVS+-jMf7+stYY+Oh56np1GE+X8AWPmpdGtgTp+heL6j5Ju16shMOzcvY65EjuTb5hCfjn\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Phone Number",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Url}}/v1/Services/:ServiceSid/PhoneNumbers",
+							"host": [
+								"{{v1-Services-ServiceSid-PhoneNumbers-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"PhoneNumbers"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "89",
+									"description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Url}}/v1/Services/:ServiceSid/PhoneNumbers?PageSize=89",
+									"host": [
+										"{{v1-Services-ServiceSid-PhoneNumbers-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"PhoneNumbers"
+									],
+									"query": [
+										{
+											"key": "PageSize",
+											"value": "89"
+										}
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"phone_numbers\": [\n    {\n      \"sid\": \"PNc54caa09525BdDFFf809C8f1FFbC0130\",\n      \"account_sid\": \"ACe64f0E0F7D8DCc44B65be20ECAeFAcA1\",\n      \"service_sid\": \"MG82bBa7D2dbF863d8AC7e92adb40526ac\",\n      \"date_created\": \"1959-03-09T09:48:32.304Z\",\n      \"date_updated\": \"1988-02-25T12:36:27.010Z\",\n      \"phone_number\": \"officia in amet irure\",\n      \"country_code\": \"labore\",\n      \"capabilities\": [\n        \"est officia dolor in\",\n        \"labore veniam commodo qui\"\n      ],\n      \"url\": \"http://MzbSYyzgicVgbePuVgJ.cffLnXan,5gm8WwXc0tFNqUNE01pDrA0cOIY-\"\n    },\n    {\n      \"sid\": \"PND49020fc2E7C00463ABCeaff90EA7bDf\",\n      \"account_sid\": \"AC7BCcB4AC97DeEA4Ad3f765CBd5BBAd73\",\n      \"service_sid\": \"MG5CB77505BF8722BdD1fAbEDF060A0846\",\n      \"date_created\": \"1996-11-03T02:15:43.967Z\",\n      \"date_updated\": \"1983-08-17T16:28:04.011Z\",\n      \"phone_number\": \"ea do\",\n      \"country_code\": \"mollit ul\",\n      \"capabilities\": [\n        \"mollit consequat aute\",\n        \"sed consequat\"\n      ],\n      \"url\": \"https://Pj.joWTg2LQTa1r3Xj3PjCrETKAb-Z6NoRQJQdpk37Z+zJOdpoo,sXHVEpaXF\"\n    }\n  ],\n  \"meta\": {\n    \"first_page_url\": \"http://uDfEDuxKnQHwmcBUNJTJrpXclzEaQml.amfwQI0MttoHiKtVj.ogQnKuHrCA3l9.Q\",\n    \"next_page_url\": \"http://cdm.rezxzDl5gT,hgsA2G6DqoAMrXmT\",\n    \"page\": 77400715,\n    \"page_size\": 10859551,\n    \"previous_page_url\": \"https://icnTjQnPMoERhfH.mzTJhJrJ6YSYdcLU-7EWjBSA+G1TPq\",\n    \"url\": \"http://fbsjSaxAfGOhwlPPuiRWco.geifYAWfP-zZGaR+dJa4SkrpYsxJ9z9YFF7NkJ5vQQX\",\n    \"key\": \"Lorem aliqua enim\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Phone Number",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}/v1/Services/:ServiceSid/PhoneNumbers/:Sid",
+							"host": [
+								"{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"PhoneNumbers",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "amet magna elit",
+									"description": "(Required) The SID of the PhoneNumber resource to delete."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "The resource was deleted successfully.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}/v1/Services/:ServiceSid/PhoneNumbers/:Sid",
+									"host": [
+										"{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"PhoneNumbers",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "amet magna elit",
+											"description": "(Required) The SID of the PhoneNumber resource to delete."
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Fetch Phone Number",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}/v1/Services/:ServiceSid/PhoneNumbers/:Sid",
+							"host": [
+								"{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"PhoneNumbers",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "amet magna elit",
+									"description": "(Required) The SID of the PhoneNumber resource to fetch."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}/v1/Services/:ServiceSid/PhoneNumbers/:Sid",
+									"host": [
+										"{{v1-Services-ServiceSid-PhoneNumbers-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"PhoneNumbers",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "amet magna elit",
+											"description": "(Required) The SID of the PhoneNumber resource to fetch."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"PN8d73D3DE48231bAAE08D8EA5849dC3ec\",\n  \"account_sid\": \"ACA5F5CEb7BB27B6FFE41f5B2D9f43cD8d\",\n  \"service_sid\": \"MG0EEfcacB392FbC22bEcDC90d27bcBA34\",\n  \"date_created\": \"2013-03-12T21:00:38.780Z\",\n  \"date_updated\": \"1980-11-01T15:16:06.352Z\",\n  \"phone_number\": \"occaecat laborum exercitation\",\n  \"country_code\": \"sed do id fugiat\",\n  \"capabilities\": [\n    \"culpa consectetur\",\n    \"nulla eiusmod qui aute\"\n  ],\n  \"url\": \"https://ocuWBtBTHTRqWwjWZhT.sgaqtcvuD632eyFrC,LLdIKD\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Create Service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "FriendlyName",
+									"value": "est deserunt",
+									"description": "(Required) A descriptive string that you create to describe the resource. It can be up to 64 characters long."
+								},
+								{
+									"key": "InboundRequestUrl",
+									"value": "http://kOkMsnPQhLVooZyJyvfyhiODRygAyR.wnj+SzFchP0",
+									"description": "The URL we call using `inbound_method` when a message is received by any phone number or short code in the Service. When this property is `null`, receiving inbound messages is disabled. All messages sent to the Twilio phone number or short code will not be logged and received on the Account. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `inbound_request_url` defined for the Messaging Service.",
+									"disabled": true
+								},
+								{
+									"key": "InboundMethod",
+									"value": "POST",
+									"description": "The HTTP method we should use to call `inbound_request_url`. Can be `GET` or `POST` and the default is `POST`.",
+									"disabled": true
+								},
+								{
+									"key": "FallbackUrl",
+									"value": "http://xEWTaRcfGnENisoCSQMJjpDhHhJPfJvZE.jzykuyT0DXi6uclLX1p45AblXtzi2cUeYOjeGvX+VmR4yaq",
+									"description": "The URL that we call using `fallback_method` if an error occurs while retrieving or executing the TwiML from the Inbound Request URL. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `fallback_url` defined for the Messaging Service.",
+									"disabled": true
+								},
+								{
+									"key": "FallbackMethod",
+									"value": "HEAD",
+									"description": "The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.",
+									"disabled": true
+								},
+								{
+									"key": "StatusCallback",
+									"value": "https://TGorJbZRHIWVpRwLtWxFsNHvrCPNOHP.ryov4uGNOQWrSO19",
+									"description": "The URL we should call to [pass status updates](https://www.twilio.com/docs/sms/api/message-resource#message-status-values) about message delivery.",
+									"disabled": true
+								},
+								{
+									"key": "StickySender",
+									"value": "false",
+									"description": "Whether to enable [Sticky Sender](https://www.twilio.com/docs/sms/services#sticky-sender) on the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "MmsConverter",
+									"value": "false",
+									"description": "Whether to enable the [MMS Converter](https://www.twilio.com/docs/sms/services#mms-converter) for messages sent through the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "SmartEncoding",
+									"value": "false",
+									"description": "Whether to enable [Smart Encoding](https://www.twilio.com/docs/sms/services#smart-encoding) for messages sent through the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "ScanMessageContent",
+									"value": "disable",
+									"description": "Reserved.",
+									"disabled": true
+								},
+								{
+									"key": "FallbackToLongCode",
+									"value": "true",
+									"description": "Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/sms/services#fallback-to-long-code) for messages sent through the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "AreaCodeGeomatch",
+									"value": "true",
+									"description": "Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/sms/services#area-code-geomatch) on the Service Instance.",
+									"disabled": true
+								},
+								{
+									"key": "ValidityPeriod",
+									"value": "5167621",
+									"description": "How long, in seconds, messages sent from the Service are valid. Can be an integer from `1` to `14,400`.",
+									"disabled": true
+								},
+								{
+									"key": "SynchronousValidation",
+									"value": "true",
+									"description": "Reserved.",
+									"disabled": true
+								},
+								{
+									"key": "Usecase",
+									"value": "Lore",
+									"description": "A string that describes the scenario in which the Messaging Service will be used. Examples: [notification, marketing, verification, poll ..].",
+									"disabled": true
+								},
+								{
+									"key": "UseInboundWebhookOnNumber",
+									"value": "false",
+									"description": "A boolean value that indicates either the webhook url configured on the phone number will be used or `inbound_request_url`/`fallback_url` url will be called when a message is received from the phone number. If this field is enabled then the webhook url defined on the phone number will override the `inbound_request_url`/`fallback_url` defined for the Messaging Service.",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-Services-Url}}/v1/Services",
+							"host": [
+								"{{v1-Services-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "FriendlyName",
+											"value": "est deserunt",
+											"description": "(Required) A descriptive string that you create to describe the resource. It can be up to 64 characters long."
+										},
+										{
+											"key": "InboundRequestUrl",
+											"value": "http://kOkMsnPQhLVooZyJyvfyhiODRygAyR.wnj+SzFchP0",
+											"description": "The URL we call using `inbound_method` when a message is received by any phone number or short code in the Service. When this property is `null`, receiving inbound messages is disabled. All messages sent to the Twilio phone number or short code will not be logged and received on the Account. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `inbound_request_url` defined for the Messaging Service.",
+											"disabled": true
+										},
+										{
+											"key": "InboundMethod",
+											"value": "POST",
+											"description": "The HTTP method we should use to call `inbound_request_url`. Can be `GET` or `POST` and the default is `POST`.",
+											"disabled": true
+										},
+										{
+											"key": "FallbackUrl",
+											"value": "http://xEWTaRcfGnENisoCSQMJjpDhHhJPfJvZE.jzykuyT0DXi6uclLX1p45AblXtzi2cUeYOjeGvX+VmR4yaq",
+											"description": "The URL that we call using `fallback_method` if an error occurs while retrieving or executing the TwiML from the Inbound Request URL. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `fallback_url` defined for the Messaging Service.",
+											"disabled": true
+										},
+										{
+											"key": "FallbackMethod",
+											"value": "HEAD",
+											"description": "The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.",
+											"disabled": true
+										},
+										{
+											"key": "StatusCallback",
+											"value": "https://TGorJbZRHIWVpRwLtWxFsNHvrCPNOHP.ryov4uGNOQWrSO19",
+											"description": "The URL we should call to [pass status updates](https://www.twilio.com/docs/sms/api/message-resource#message-status-values) about message delivery.",
+											"disabled": true
+										},
+										{
+											"key": "StickySender",
+											"value": "false",
+											"description": "Whether to enable [Sticky Sender](https://www.twilio.com/docs/sms/services#sticky-sender) on the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "MmsConverter",
+											"value": "false",
+											"description": "Whether to enable the [MMS Converter](https://www.twilio.com/docs/sms/services#mms-converter) for messages sent through the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "SmartEncoding",
+											"value": "false",
+											"description": "Whether to enable [Smart Encoding](https://www.twilio.com/docs/sms/services#smart-encoding) for messages sent through the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "ScanMessageContent",
+											"value": "disable",
+											"description": "Reserved.",
+											"disabled": true
+										},
+										{
+											"key": "FallbackToLongCode",
+											"value": "true",
+											"description": "Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/sms/services#fallback-to-long-code) for messages sent through the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "AreaCodeGeomatch",
+											"value": "true",
+											"description": "Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/sms/services#area-code-geomatch) on the Service Instance.",
+											"disabled": true
+										},
+										{
+											"key": "ValidityPeriod",
+											"value": "5167621",
+											"description": "How long, in seconds, messages sent from the Service are valid. Can be an integer from `1` to `14,400`.",
+											"disabled": true
+										},
+										{
+											"key": "SynchronousValidation",
+											"value": "true",
+											"description": "Reserved.",
+											"disabled": true
+										},
+										{
+											"key": "Usecase",
+											"value": "Lore",
+											"description": "A string that describes the scenario in which the Messaging Service will be used. Examples: [notification, marketing, verification, poll ..].",
+											"disabled": true
+										},
+										{
+											"key": "UseInboundWebhookOnNumber",
+											"value": "false",
+											"description": "A boolean value that indicates either the webhook url configured on the phone number will be used or `inbound_request_url`/`fallback_url` url will be called when a message is received from the phone number. If this field is enabled then the webhook url defined on the phone number will override the `inbound_request_url`/`fallback_url` defined for the Messaging Service.",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-Services-Url}}/v1/Services",
+									"host": [
+										"{{v1-Services-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"MGAC261dA9bB6C07479Da8aa2Babc62AA7\",\n  \"account_sid\": \"AC0Fbc0bFa2fdb6afb0e92025A7e159eC0\",\n  \"friendly_name\": \"eu eiusmod dolor\",\n  \"date_created\": \"1943-04-23T13:25:16.730Z\",\n  \"date_updated\": \"2002-07-10T04:05:35.712Z\",\n  \"inbound_request_url\": \"http://onsLt.uczq9UlNtEqOL+NE\",\n  \"inbound_method\": \"PATCH\",\n  \"fallback_url\": \"http://rKZyZk.gmcdstqVcTHrHopE98GSMp6.FcX\",\n  \"fallback_method\": \"GET\",\n  \"status_callback\": \"https://YKZHfmpbTbATWNMatBLZarNnkBYWJif.khzNYdGGJW48GiFxUv3vhDRkw6bdUmGM1d1eBZiQkgTYjinrywce8\",\n  \"sticky_sender\": false,\n  \"mms_converter\": false,\n  \"smart_encoding\": true,\n  \"scan_message_content\": \"inherit\",\n  \"fallback_to_long_code\": false,\n  \"area_code_geomatch\": true,\n  \"synchronous_validation\": true,\n  \"validity_period\": -45075396,\n  \"url\": \"https://IxTyJDzisBIZstpbfdUL.itsPN\",\n  \"links\": {},\n  \"usecase\": \"eiusmod fugiat mollit elit\",\n  \"us_app_to_person_registered\": true,\n  \"use_inbound_webhook_on_number\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "List Service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-Url}}/v1/Services",
+							"host": [
+								"{{v1-Services-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "89",
+									"description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-Url}}/v1/Services?PageSize=89",
+									"host": [
+										"{{v1-Services-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services"
+									],
+									"query": [
+										{
+											"key": "PageSize",
+											"value": "89"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"services\": [\n    {\n      \"sid\": \"MG645942dbe2d1946CCd3E0a2a7ebf39C9\",\n      \"account_sid\": \"ACB0A1FEb7FDCFDef0AcA8ac4dD5e000e4\",\n      \"friendly_name\": \"est Excepteur velit\",\n      \"date_created\": \"1953-02-15T03:15:17.348Z\",\n      \"date_updated\": \"2010-10-11T03:19:03.515Z\",\n      \"inbound_request_url\": \"https://LokQglB.mlvMfyf6PHcLW9wzmOQe\",\n      \"inbound_method\": \"HEAD\",\n      \"fallback_url\": \"https://IXiofUNhsAhNSVMAjoetAZpUPhiDPpX.tpnoxODVvoPfesNDm3FybqTq1.Q.PY\",\n      \"fallback_method\": \"PATCH\",\n      \"status_callback\": \"https://zmC.rmtdRHNhOzhDLhvsL.TxezZuNDAuJBugQh71vVS1j0ozfq4hmYOj0-CyrnIdm0eEZ\",\n      \"sticky_sender\": true,\n      \"mms_converter\": true,\n      \"smart_encoding\": false,\n      \"scan_message_content\": \"inherit\",\n      \"fallback_to_long_code\": true,\n      \"area_code_geomatch\": false,\n      \"synchronous_validation\": false,\n      \"validity_period\": -73206052,\n      \"url\": \"http://uVakLBNNgtAhKrEvZzuXG.kkde,aQv,Ocfn2obFfS77dmYI99,lv,kPdZWKS8QY\",\n      \"links\": {},\n      \"usecase\": \"commodo ut\",\n      \"us_app_to_person_registered\": false,\n      \"use_inbound_webhook_on_number\": true\n    },\n    {\n      \"sid\": \"MGDCc7db70b7b6C85CE7fec7C61fa2eC94\",\n      \"account_sid\": \"ACE36A2DE6Da2cf8CDBC9eDbFa7Ef140CC\",\n      \"friendly_name\": \"nulla et sit cillum\",\n      \"date_created\": \"2011-09-22T09:58:39.854Z\",\n      \"date_updated\": \"1964-12-13T12:58:18.579Z\",\n      \"inbound_request_url\": \"https://YsgLOplffXlciZUYtwQqoKWAvjYCv.hhqyUBm9wfxFkmOAZmYMZEq+ROSxi\",\n      \"inbound_method\": \"PUT\",\n      \"fallback_url\": \"https://GGqbGNmWdB.zwxghqgKitiJ3qGHuNYVKg9aBELdJFW+5\",\n      \"fallback_method\": \"GET\",\n      \"status_callback\": \"http://sVYAfBocHInYtzG.dwwBfqzE2EgzQORodp9SDjdjykbt4axoVoTsg1n+a.2HZC6HceS+fu4gTtm\",\n      \"sticky_sender\": true,\n      \"mms_converter\": false,\n      \"smart_encoding\": true,\n      \"scan_message_content\": \"enable\",\n      \"fallback_to_long_code\": true,\n      \"area_code_geomatch\": true,\n      \"synchronous_validation\": true,\n      \"validity_period\": -87473479,\n      \"url\": \"http://VIiavwRMbrudIMdGpaKY.svdzzmiuJUBoA3YrJT-2s-S+u+3CX5AV1kcbFlzaTR,k+qgZgGKzC7cE-NSAFppm+ixoJLQQSEqGQC\",\n      \"links\": {},\n      \"usecase\": \"fugiat exercitation voluptate mollit\",\n      \"us_app_to_person_registered\": true,\n      \"use_inbound_webhook_on_number\": true\n    }\n  ],\n  \"meta\": {\n    \"first_page_url\": \"https://hFKTffzBLgvDWtHfejaJ.jawGDHXE6-xsdd+XjWlDhJkxgxgti+zwUtLVvA+AWKL5VT7\",\n    \"next_page_url\": \"https://RmZzKPsnSbGbhdaBbDZtmYpinLaxzd.ipyd9Wz7kz9hn7EgS2B71,\",\n    \"page\": -89765216,\n    \"page_size\": -83386511,\n    \"previous_page_url\": \"https://DqzwTteUBQqQppjsPWfDrcldobaOjrwu.bvagrtJBRAgs1t6di-FKEuNc1H2gsfc+56d9oLI.hPGk2qN52MtI-cLe.TSQr8rFexPAn\",\n    \"url\": \"https://nHpDirzGsGSpoNMQJBZbpYYQMCzF.vbpbB2ZVKZ0nGLIYzrIxL48+jYVMgI6lxDjQB.N9,ES7cH8puHDRYi,DcL7AP9DmXZxQVf\",\n    \"key\": \"pariatur ut\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "FriendlyName",
+									"value": "eiusmod cillum non incididunt",
+									"description": "A descriptive string that you create to describe the resource. It can be up to 64 characters long.",
+									"disabled": true
+								},
+								{
+									"key": "InboundRequestUrl",
+									"value": "http://zsRHdRQKm.jlIKssD19XWd3QSrC2hPfErQc,nLb0Y3R7",
+									"description": "The URL we call using `inbound_method` when a message is received by any phone number or short code in the Service. When this property is `null`, receiving inbound messages is disabled. All messages sent to the Twilio phone number or short code will not be logged and received on the Account. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `inbound_request_url` defined for the Messaging Service.",
+									"disabled": true
+								},
+								{
+									"key": "InboundMethod",
+									"value": "GET",
+									"description": "The HTTP method we should use to call `inbound_request_url`. Can be `GET` or `POST` and the default is `POST`.",
+									"disabled": true
+								},
+								{
+									"key": "FallbackUrl",
+									"value": "https://Ejz.vxueV.ujU5GPE-D4J0NOJCFB15EXquWKD1",
+									"description": "The URL that we call using `fallback_method` if an error occurs while retrieving or executing the TwiML from the Inbound Request URL. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `fallback_url` defined for the Messaging Service.",
+									"disabled": true
+								},
+								{
+									"key": "FallbackMethod",
+									"value": "PATCH",
+									"description": "The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.",
+									"disabled": true
+								},
+								{
+									"key": "StatusCallback",
+									"value": "https://ZMXULSvBKqIeNsNWbXpIrWrYqSK.niyrbzxxXyX.l67t1KHdsnvd65TLONZFj2.aHXIy,0Mw",
+									"description": "The URL we should call to [pass status updates](https://www.twilio.com/docs/sms/api/message-resource#message-status-values) about message delivery.",
+									"disabled": true
+								},
+								{
+									"key": "StickySender",
+									"value": "true",
+									"description": "Whether to enable [Sticky Sender](https://www.twilio.com/docs/sms/services#sticky-sender) on the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "MmsConverter",
+									"value": "false",
+									"description": "Whether to enable the [MMS Converter](https://www.twilio.com/docs/sms/services#mms-converter) for messages sent through the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "SmartEncoding",
+									"value": "true",
+									"description": "Whether to enable [Smart Encoding](https://www.twilio.com/docs/sms/services#smart-encoding) for messages sent through the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "ScanMessageContent",
+									"value": "enable",
+									"description": "Reserved.",
+									"disabled": true
+								},
+								{
+									"key": "FallbackToLongCode",
+									"value": "true",
+									"description": "Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/sms/services#fallback-to-long-code) for messages sent through the Service instance.",
+									"disabled": true
+								},
+								{
+									"key": "AreaCodeGeomatch",
+									"value": "false",
+									"description": "Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/sms/services#area-code-geomatch) on the Service Instance.",
+									"disabled": true
+								},
+								{
+									"key": "ValidityPeriod",
+									"value": "-13915393",
+									"description": "How long, in seconds, messages sent from the Service are valid. Can be an integer from `1` to `14,400`.",
+									"disabled": true
+								},
+								{
+									"key": "SynchronousValidation",
+									"value": "false",
+									"description": "Reserved.",
+									"disabled": true
+								},
+								{
+									"key": "Usecase",
+									"value": "irure ipsum",
+									"description": "A string that describes the scenario in which the Messaging Service will be used. Examples: [notification, marketing, verification, poll ..]",
+									"disabled": true
+								},
+								{
+									"key": "UseInboundWebhookOnNumber",
+									"value": "true",
+									"description": "A boolean value that indicates either the webhook url configured on the phone number will be used or `inbound_request_url`/`fallback_url` url will be called when a message is received from the phone number. If this field is enabled then the webhook url defined on the phone number will override the `inbound_request_url`/`fallback_url` defined for the Messaging Service.",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-Services-Sid-Url}}/v1/Services/:Sid",
+							"host": [
+								"{{v1-Services-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "Sid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the Service resource to update."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "FriendlyName",
+											"value": "eiusmod cillum non incididunt",
+											"description": "A descriptive string that you create to describe the resource. It can be up to 64 characters long.",
+											"disabled": true
+										},
+										{
+											"key": "InboundRequestUrl",
+											"value": "http://zsRHdRQKm.jlIKssD19XWd3QSrC2hPfErQc,nLb0Y3R7",
+											"description": "The URL we call using `inbound_method` when a message is received by any phone number or short code in the Service. When this property is `null`, receiving inbound messages is disabled. All messages sent to the Twilio phone number or short code will not be logged and received on the Account. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `inbound_request_url` defined for the Messaging Service.",
+											"disabled": true
+										},
+										{
+											"key": "InboundMethod",
+											"value": "GET",
+											"description": "The HTTP method we should use to call `inbound_request_url`. Can be `GET` or `POST` and the default is `POST`.",
+											"disabled": true
+										},
+										{
+											"key": "FallbackUrl",
+											"value": "https://Ejz.vxueV.ujU5GPE-D4J0NOJCFB15EXquWKD1",
+											"description": "The URL that we call using `fallback_method` if an error occurs while retrieving or executing the TwiML from the Inbound Request URL. If the `use_inbound_webhook_on_number` field is enabled then the webhook url defined on the phone number will override the `fallback_url` defined for the Messaging Service.",
+											"disabled": true
+										},
+										{
+											"key": "FallbackMethod",
+											"value": "PATCH",
+											"description": "The HTTP method we should use to call `fallback_url`. Can be: `GET` or `POST`.",
+											"disabled": true
+										},
+										{
+											"key": "StatusCallback",
+											"value": "https://ZMXULSvBKqIeNsNWbXpIrWrYqSK.niyrbzxxXyX.l67t1KHdsnvd65TLONZFj2.aHXIy,0Mw",
+											"description": "The URL we should call to [pass status updates](https://www.twilio.com/docs/sms/api/message-resource#message-status-values) about message delivery.",
+											"disabled": true
+										},
+										{
+											"key": "StickySender",
+											"value": "true",
+											"description": "Whether to enable [Sticky Sender](https://www.twilio.com/docs/sms/services#sticky-sender) on the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "MmsConverter",
+											"value": "false",
+											"description": "Whether to enable the [MMS Converter](https://www.twilio.com/docs/sms/services#mms-converter) for messages sent through the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "SmartEncoding",
+											"value": "true",
+											"description": "Whether to enable [Smart Encoding](https://www.twilio.com/docs/sms/services#smart-encoding) for messages sent through the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "ScanMessageContent",
+											"value": "enable",
+											"description": "Reserved.",
+											"disabled": true
+										},
+										{
+											"key": "FallbackToLongCode",
+											"value": "true",
+											"description": "Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/sms/services#fallback-to-long-code) for messages sent through the Service instance.",
+											"disabled": true
+										},
+										{
+											"key": "AreaCodeGeomatch",
+											"value": "false",
+											"description": "Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/sms/services#area-code-geomatch) on the Service Instance.",
+											"disabled": true
+										},
+										{
+											"key": "ValidityPeriod",
+											"value": "-13915393",
+											"description": "How long, in seconds, messages sent from the Service are valid. Can be an integer from `1` to `14,400`.",
+											"disabled": true
+										},
+										{
+											"key": "SynchronousValidation",
+											"value": "false",
+											"description": "Reserved.",
+											"disabled": true
+										},
+										{
+											"key": "Usecase",
+											"value": "irure ipsum",
+											"description": "A string that describes the scenario in which the Messaging Service will be used. Examples: [notification, marketing, verification, poll ..]",
+											"disabled": true
+										},
+										{
+											"key": "UseInboundWebhookOnNumber",
+											"value": "true",
+											"description": "A boolean value that indicates either the webhook url configured on the phone number will be used or `inbound_request_url`/`fallback_url` url will be called when a message is received from the phone number. If this field is enabled then the webhook url defined on the phone number will override the `inbound_request_url`/`fallback_url` defined for the Messaging Service.",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-Services-Sid-Url}}/v1/Services/:Sid",
+									"host": [
+										"{{v1-Services-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "Sid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the Service resource to update."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"MGAC261dA9bB6C07479Da8aa2Babc62AA7\",\n  \"account_sid\": \"AC0Fbc0bFa2fdb6afb0e92025A7e159eC0\",\n  \"friendly_name\": \"eu eiusmod dolor\",\n  \"date_created\": \"1943-04-23T13:25:16.730Z\",\n  \"date_updated\": \"2002-07-10T04:05:35.712Z\",\n  \"inbound_request_url\": \"http://onsLt.uczq9UlNtEqOL+NE\",\n  \"inbound_method\": \"PATCH\",\n  \"fallback_url\": \"http://rKZyZk.gmcdstqVcTHrHopE98GSMp6.FcX\",\n  \"fallback_method\": \"GET\",\n  \"status_callback\": \"https://YKZHfmpbTbATWNMatBLZarNnkBYWJif.khzNYdGGJW48GiFxUv3vhDRkw6bdUmGM1d1eBZiQkgTYjinrywce8\",\n  \"sticky_sender\": false,\n  \"mms_converter\": false,\n  \"smart_encoding\": true,\n  \"scan_message_content\": \"inherit\",\n  \"fallback_to_long_code\": false,\n  \"area_code_geomatch\": true,\n  \"synchronous_validation\": true,\n  \"validity_period\": -45075396,\n  \"url\": \"https://IxTyJDzisBIZstpbfdUL.itsPN\",\n  \"links\": {},\n  \"usecase\": \"eiusmod fugiat mollit elit\",\n  \"us_app_to_person_registered\": true,\n  \"use_inbound_webhook_on_number\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-Sid-Url}}/v1/Services/:Sid",
+							"host": [
+								"{{v1-Services-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "Sid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the Service resource to fetch."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-Sid-Url}}/v1/Services/:Sid",
+									"host": [
+										"{{v1-Services-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "Sid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the Service resource to fetch."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"MGAC261dA9bB6C07479Da8aa2Babc62AA7\",\n  \"account_sid\": \"AC0Fbc0bFa2fdb6afb0e92025A7e159eC0\",\n  \"friendly_name\": \"eu eiusmod dolor\",\n  \"date_created\": \"1943-04-23T13:25:16.730Z\",\n  \"date_updated\": \"2002-07-10T04:05:35.712Z\",\n  \"inbound_request_url\": \"http://onsLt.uczq9UlNtEqOL+NE\",\n  \"inbound_method\": \"PATCH\",\n  \"fallback_url\": \"http://rKZyZk.gmcdstqVcTHrHopE98GSMp6.FcX\",\n  \"fallback_method\": \"GET\",\n  \"status_callback\": \"https://YKZHfmpbTbATWNMatBLZarNnkBYWJif.khzNYdGGJW48GiFxUv3vhDRkw6bdUmGM1d1eBZiQkgTYjinrywce8\",\n  \"sticky_sender\": false,\n  \"mms_converter\": false,\n  \"smart_encoding\": true,\n  \"scan_message_content\": \"inherit\",\n  \"fallback_to_long_code\": false,\n  \"area_code_geomatch\": true,\n  \"synchronous_validation\": true,\n  \"validity_period\": -45075396,\n  \"url\": \"https://IxTyJDzisBIZstpbfdUL.itsPN\",\n  \"links\": {},\n  \"usecase\": \"eiusmod fugiat mollit elit\",\n  \"us_app_to_person_registered\": true,\n  \"use_inbound_webhook_on_number\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Service",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{v1-Services-Sid-Url}}/v1/Services/:Sid",
+							"host": [
+								"{{v1-Services-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "Sid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the Service resource to delete."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "The resource was deleted successfully.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-Sid-Url}}/v1/Services/:Sid",
+									"host": [
+										"{{v1-Services-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "Sid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the Service resource to delete."
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Short Codes",
+			"item": [
+				{
+					"name": "Create Short Code",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ShortCodeSid",
+									"value": "SCe6ACeA47581dc037DDE6C1adAbB3cceD",
+									"description": "(Required) The SID of the ShortCode resource being added to the Service."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-ShortCodes-Url}}/v1/Services/:ServiceSid/ShortCodes",
+							"host": [
+								"{{v1-Services-ServiceSid-ShortCodes-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"ShortCodes"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "ShortCodeSid",
+											"value": "SCe6ACeA47581dc037DDE6C1adAbB3cceD",
+											"description": "(Required) The SID of the ShortCode resource being added to the Service."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-ShortCodes-Url}}/v1/Services/:ServiceSid/ShortCodes",
+									"host": [
+										"{{v1-Services-ServiceSid-ShortCodes-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"ShortCodes"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under."
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"SC859cFfafc43F8267beDfdd0A1c08E957\",\n  \"account_sid\": \"ACDfFA0E5F7E48dDC62bbdCc6Dc4C697fd\",\n  \"service_sid\": \"MGd3e9F93d2bbF6cAadB0Ef43b2Fb532cE\",\n  \"date_created\": \"1976-07-04T05:28:25.240Z\",\n  \"date_updated\": \"2013-01-09T21:13:55.473Z\",\n  \"short_code\": \"consectetur dolore anim\",\n  \"country_code\": \"adipisicing commodo voluptate proident\",\n  \"capabilities\": [\n    \"et nulla sint sit\",\n    \"proident\"\n  ],\n  \"url\": \"https://sFglXXWKdkxLLcbZGgqBKfKd.tnBnLlQ.qoVVTc4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Short Code",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-ShortCodes-Url}}/v1/Services/:ServiceSid/ShortCodes",
+							"host": [
+								"{{v1-Services-ServiceSid-ShortCodes-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"ShortCodes"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "89",
+									"description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-ShortCodes-Url}}/v1/Services/:ServiceSid/ShortCodes?PageSize=89",
+									"host": [
+										"{{v1-Services-ServiceSid-ShortCodes-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"ShortCodes"
+									],
+									"query": [
+										{
+											"key": "PageSize",
+											"value": "89"
+										}
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the resources from."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"short_codes\": [\n    {\n      \"sid\": \"SC761e5aeF5Cf56bBFaAea9E163Dfcbd37\",\n      \"account_sid\": \"ACbBF3dAC8CB82D626DFDdEAEEBd09C6ED\",\n      \"service_sid\": \"MG54eBd56AD1c8ebf74Ea32C4DBF31cF97\",\n      \"date_created\": \"2016-07-14T18:03:15.393Z\",\n      \"date_updated\": \"1990-04-23T06:14:38.672Z\",\n      \"short_code\": \"aute do\",\n      \"country_code\": \"Ut amet\",\n      \"capabilities\": [\n        \"veniam enim laboris et Lorem\",\n        \"consequat e\"\n      ],\n      \"url\": \"http://QU.upjaPnHnZLpP1vg\"\n    },\n    {\n      \"sid\": \"SC96876853D9BC2f5Cc774F27AdA9a8Ecb\",\n      \"account_sid\": \"ACcc1AA28ABCabBF064e6f1fc843a6d31a\",\n      \"service_sid\": \"MG3AdcdC0a644915db18deaacCBd28fAb1\",\n      \"date_created\": \"2004-09-17T21:53:00.320Z\",\n      \"date_updated\": \"2000-02-19T07:31:29.205Z\",\n      \"short_code\": \"Duis officia \",\n      \"country_code\": \"voluptate\",\n      \"capabilities\": [\n        \"aliqua qui Ut in\",\n        \"cupidatat ex ea\"\n      ],\n      \"url\": \"http://BOraECSEBxJfrPWu.cnf2Ta8q2TtLBzoW2K.hl2YgKBMyk.pBdgtoAz8U0Io\"\n    }\n  ],\n  \"meta\": {\n    \"first_page_url\": \"https://nMOtlczJaPvgAevkfLMEWijMKxYVbZuC.laIOAqcFI\",\n    \"next_page_url\": \"http://JwLbSZccXEbKBYDYBIHAgfzPCFHOgI.omjdWTVDEO8,NlSef0md6ziMA-ylxGVmlYFF.ovgh4CLnod9QM,I2hDvrl\",\n    \"page\": 19495045,\n    \"page_size\": 45216313,\n    \"previous_page_url\": \"http://vFAQkkrKMQ.tqscadRxjrSem37AfRLffnJM0DXmxDvSzMJFeiz.-4UfCP+CDN\",\n    \"url\": \"http://LVeaieeI.ifrxDLiPZNQ+jnfBUa94Q+kfZS\",\n    \"key\": \"sint in\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Short Code",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}/v1/Services/:ServiceSid/ShortCodes/:Sid",
+							"host": [
+								"{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"ShortCodes",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "amet magna elit",
+									"description": "(Required) The SID of the ShortCode resource to delete."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "The resource was deleted successfully.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}/v1/Services/:ServiceSid/ShortCodes/:Sid",
+									"host": [
+										"{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"ShortCodes",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "amet magna elit",
+											"description": "(Required) The SID of the ShortCode resource to delete."
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Fetch Short Code",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}/v1/Services/:ServiceSid/ShortCodes/:Sid",
+							"host": [
+								"{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":ServiceSid",
+								"ShortCodes",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "ServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "amet magna elit",
+									"description": "(Required) The SID of the ShortCode resource to fetch."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}/v1/Services/:ServiceSid/ShortCodes/:Sid",
+									"host": [
+										"{{v1-Services-ServiceSid-ShortCodes-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":ServiceSid",
+										"ShortCodes",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "ServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "amet magna elit",
+											"description": "(Required) The SID of the ShortCode resource to fetch."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"SC5B81dFdBd4c169cCb1F8565bebe6aA5B\",\n  \"account_sid\": \"AC344B82eEcACd5c9DdA3a2994fBCcA618\",\n  \"service_sid\": \"MGCBcCaeE22e7a607CbC0bf7b8A6Db0DFC\",\n  \"date_created\": \"1948-02-04T15:38:57.834Z\",\n  \"date_updated\": \"1944-07-10T00:18:34.003Z\",\n  \"short_code\": \"incididunt laboris in\",\n  \"country_code\": \"dolore Duis aliqua enim\",\n  \"capabilities\": [\n    \"et Duis\",\n    \"dolor elit in quis sed\"\n  ],\n  \"url\": \"https://SmCjMKcwbPVpz.ebjtoZ3bS1p3bS2ydT8cO8hrLS8-tfeE\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "US A2P",
+			"item": [
+				{
+					"name": "Create Us App To Person",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "BrandRegistrationSid",
+									"value": "BN22aEDDDA3ad9E5fdE68bBB11f0b4deD9",
+									"description": "(Required) A2P Brand Registration SID"
+								},
+								{
+									"key": "Description",
+									"value": "consequat sed dolor est",
+									"description": "(Required) A short description of what this SMS campaign does."
+								},
+								{
+									"key": "MessageSamples",
+									"value": "Lorem nulla",
+									"description": "(Required) Message samples, at least 2 and up to 5 sample messages, <=1024 chars each."
+								},
+								{
+									"key": "MessageSamples",
+									"value": "voluptate ullamco Excepteur Ut",
+									"description": "(Required) Message samples, at least 2 and up to 5 sample messages, <=1024 chars each."
+								},
+								{
+									"key": "UsAppToPersonUsecase",
+									"value": "laborum enim Duis",
+									"description": "(Required) A2P Campaign Use Case. Examples: [ 2FA, EMERGENCY, MARKETING..]"
+								},
+								{
+									"key": "HasEmbeddedLinks",
+									"value": "true",
+									"description": "(Required) Indicates that this SMS campaign will send messages that contain links."
+								},
+								{
+									"key": "HasEmbeddedPhone",
+									"value": "false",
+									"description": "(Required) Indicates that this SMS campaign will send messages that contain phone numbers."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p",
+							"host": [
+								"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":MessagingServiceSid",
+								"Compliance",
+								"Usa2p"
+							],
+							"variable": [
+								{
+									"key": "MessagingServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to create the resources from."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "BrandRegistrationSid",
+											"value": "BNcC8E449db4cdfdf6fCbefC8cC2607E63",
+											"description": "(Required) A2P Brand Registration SID"
+										},
+										{
+											"key": "Description",
+											"value": "aute culpa magna",
+											"description": "(Required) A short description of what this SMS campaign does."
+										},
+										{
+											"key": "MessageSamples",
+											"value": "magna do",
+											"description": "(Required) Message samples, at least 2 and up to 5 sample messages, <=1024 chars each."
+										},
+										{
+											"key": "MessageSamples",
+											"value": "sunt reprehenderit dolore mollit",
+											"description": "(Required) Message samples, at least 2 and up to 5 sample messages, <=1024 chars each."
+										},
+										{
+											"key": "UsAppToPersonUsecase",
+											"value": "nostrud est",
+											"description": "(Required) A2P Campaign Use Case. Examples: [ 2FA, EMERGENCY, MARKETING..]"
+										},
+										{
+											"key": "HasEmbeddedLinks",
+											"value": "false",
+											"description": "(Required) Indicates that this SMS campaign will send messages that contain links."
+										},
+										{
+											"key": "HasEmbeddedPhone",
+											"value": "false",
+											"description": "(Required) Indicates that this SMS campaign will send messages that contain phone numbers."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p",
+									"host": [
+										"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":MessagingServiceSid",
+										"Compliance",
+										"Usa2p"
+									],
+									"variable": [
+										{
+											"key": "MessagingServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to create the resources from."
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"QE8aDF5d409A53c265Ef8ae7b0aeFBFBAE\",\n  \"account_sid\": \"ACe19bDbebDea1F9ee0C14FbdB18b71fED\",\n  \"brand_registration_sid\": \"BN2aa00bEaF941194ec8F3126f36FbAdF1\",\n  \"messaging_service_sid\": \"MGbCDbD75069d1395d104A5Bae61EBBe4F\",\n  \"description\": \"reprehenderit dolore cupidatat in\",\n  \"message_samples\": [\n    \"Excepteur enim adipisicing sint\",\n    \"ex ad\"\n  ],\n  \"us_app_to_person_usecase\": \"dolore esse\",\n  \"has_embedded_links\": true,\n  \"has_embedded_phone\": false,\n  \"campaign_status\": \"est velit\",\n  \"campaign_id\": \"ullamco aliquip sed non\",\n  \"is_externally_registered\": true,\n  \"rate_limits\": {},\n  \"date_created\": \"1949-01-26T06:46:02.632Z\",\n  \"date_updated\": \"1998-02-01T18:37:38.286Z\",\n  \"url\": \"http://BTBfufEQGuvwfvEjEVCZfiRUNDcbXCTqc.dlhwLXeYkNLux8GaWaDX-pezX8j\",\n  \"mock\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "List Us App To Person",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p",
+							"host": [
+								"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":MessagingServiceSid",
+								"Compliance",
+								"Usa2p"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "89",
+									"description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "MessagingServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p?PageSize=89",
+									"host": [
+										"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":MessagingServiceSid",
+										"Compliance",
+										"Usa2p"
+									],
+									"query": [
+										{
+											"key": "PageSize",
+											"value": "89"
+										}
+									],
+									"variable": [
+										{
+											"key": "MessagingServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"compliance\": [\n    {\n      \"sid\": \"QE3e93Cb28dCB1Abd3cD6DD345F3dfC65e\",\n      \"account_sid\": \"ACC1BA8aC62D4bEE344bCcE532b12Ec1dC\",\n      \"brand_registration_sid\": \"BNDFDdf8Dac4C1a4dD0F47D0A05eE2744A\",\n      \"messaging_service_sid\": \"MG5Fcb2169FefAf8D939bfbF699a047B8A\",\n      \"description\": \"laboris al\",\n      \"message_samples\": [\n        \"irure Lorem consequat sunt laboris\",\n        \"fugiat aliquip ipsum reprehenderit\"\n      ],\n      \"us_app_to_person_usecase\": \"esse proident ut\",\n      \"has_embedded_links\": true,\n      \"has_embedded_phone\": false,\n      \"campaign_status\": \"adipisicing officia incididunt\",\n      \"campaign_id\": \"pariatur fugiat dolor enim\",\n      \"is_externally_registered\": false,\n      \"rate_limits\": {},\n      \"date_created\": \"2005-09-05T01:28:01.510Z\",\n      \"date_updated\": \"1978-06-21T11:09:18.563Z\",\n      \"url\": \"http://LcrxunXMgwfbZSGluvTiIrFrjv.yvdUiksf-FtwMFYZzuCiIgLGDqhKjxJoe.SjGvsbTI,TaVFZlTJNV\",\n      \"mock\": false\n    },\n    {\n      \"sid\": \"QEC2f81d6beE909606eAdDd98c8ae4D5aa\",\n      \"account_sid\": \"AC96cB0Fd86E1dBFF8CC1eDe6d77aa687d\",\n      \"brand_registration_sid\": \"BN1e0F4D1b66Efa7F4bFAf7AD8b5Ea9b6C\",\n      \"messaging_service_sid\": \"MGb4fDbADF288F0AaC1b5BaCBEf52CfADB\",\n      \"description\": \"Ut\",\n      \"message_samples\": [\n        \"sint cupidatat id\",\n        \"Excepteur commodo ut id\"\n      ],\n      \"us_app_to_person_usecase\": \"dolor\",\n      \"has_embedded_links\": false,\n      \"has_embedded_phone\": true,\n      \"campaign_status\": \"anim exercitation\",\n      \"campaign_id\": \"Duis velit\",\n      \"is_externally_registered\": true,\n      \"rate_limits\": {},\n      \"date_created\": \"1985-06-29T04:10:44.410Z\",\n      \"date_updated\": \"1972-06-16T17:27:10.254Z\",\n      \"url\": \"http://IRMrMLMKEYR.fvczRLwT.8+mtnSiaF.ZSpF4DyCJrx5cOj8RrQkffwg0Z+loBFgIMIiSsC7M.r.5N\",\n      \"mock\": true\n    }\n  ],\n  \"meta\": {\n    \"first_page_url\": \"http://iiLeLjbvnuzBBWk.fdQv9+B,x78Bv\",\n    \"next_page_url\": \"https://XaVDjVLTxRszORARJsR.ngtvhWIJ+OPcXntUcXx.y6IToQj1Fx8IH1Qadw.ZeS8svP3Sb1.LIMzlUltYo,3\",\n    \"page\": 96658512,\n    \"page_size\": -53819190,\n    \"previous_page_url\": \"https://Se.tocbc-dUzwNBkn.VUVc7g23fD8-EBz.2yI1Q9CXxWWm5+6As9uhk9NOZ6RebRSNpFWf8\",\n    \"url\": \"https://xrGlEleaqY.yubM3yDuNvCvHWzey2q5ZS8CgrLReHFT37zxiC\",\n    \"key\": \"reprehenderit dolore occae\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Us App To Person",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p/:Sid",
+							"host": [
+								"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":MessagingServiceSid",
+								"Compliance",
+								"Usa2p",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "MessagingServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to delete the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "QEcAFA5aFe5cE5d6eBEa3F99e3EF05CF89",
+									"description": "(Required) The SID of the US A2P Compliance resource to delete `QE2c6890da8086d771620e9b13fadeba0b`."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "The resource was deleted successfully.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p/:Sid",
+									"host": [
+										"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":MessagingServiceSid",
+										"Compliance",
+										"Usa2p",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "MessagingServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to delete the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "QEcAFA5aFe5cE5d6eBEa3F99e3EF05CF89",
+											"description": "(Required) The SID of the US A2P Compliance resource to delete `QE2c6890da8086d771620e9b13fadeba0b`."
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Fetch Us App To Person",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p/:Sid",
+							"host": [
+								"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":MessagingServiceSid",
+								"Compliance",
+								"Usa2p",
+								":Sid"
+							],
+							"variable": [
+								{
+									"key": "MessagingServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from."
+								},
+								{
+									"key": "Sid",
+									"value": "QEcAFA5aFe5cE5d6eBEa3F99e3EF05CF89",
+									"description": "(Required) The SID of the US A2P Compliance resource to fetch `QE2c6890da8086d771620e9b13fadeba0b`."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p/:Sid",
+									"host": [
+										"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":MessagingServiceSid",
+										"Compliance",
+										"Usa2p",
+										":Sid"
+									],
+									"variable": [
+										{
+											"key": "MessagingServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from."
+										},
+										{
+											"key": "Sid",
+											"value": "QEcAFA5aFe5cE5d6eBEa3F99e3EF05CF89",
+											"description": "(Required) The SID of the US A2P Compliance resource to fetch `QE2c6890da8086d771620e9b13fadeba0b`."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"sid\": \"QE74Aa4aAd98e20D2A8d0bBa639D5b6c0F\",\n  \"account_sid\": \"ACf683606dd9F2A8c289E7A3A7A8F8390C\",\n  \"brand_registration_sid\": \"BNfeAa440bfa3941e96c08853CBcF2AaB9\",\n  \"messaging_service_sid\": \"MG520D3962DB038bCCF495c0d77D83d0bf\",\n  \"description\": \"ea velit incididunt et\",\n  \"message_samples\": [\n    \"in elit commodo\",\n    \"Excepteur reprehenderit\"\n  ],\n  \"us_app_to_person_usecase\": \"qui veniam elit do\",\n  \"has_embedded_links\": true,\n  \"has_embedded_phone\": false,\n  \"campaign_status\": \"aliqua exercitation anim eu\",\n  \"campaign_id\": \"ea Ut non occaecat\",\n  \"is_externally_registered\": false,\n  \"rate_limits\": {},\n  \"date_created\": \"2011-10-07T01:12:33.184Z\",\n  \"date_updated\": \"1945-04-19T10:57:04.082Z\",\n  \"url\": \"https://YXPwWZqbpzqgIIyW.koDyEC6wfXEO7ysNiyc6pl24Zo6\",\n  \"mock\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Use Cases",
+			"item": [
+				{
+					"name": "Fetch Us App To Person Usecase",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Usecases-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p/Usecases",
+							"host": [
+								"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Usecases-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								":MessagingServiceSid",
+								"Compliance",
+								"Usa2p",
+								"Usecases"
+							],
+							"query": [
+								{
+									"key": "BrandRegistrationSid",
+									"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22",
+									"description": "The unique string to identify the A2P brand.",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "MessagingServiceSid",
+									"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+									"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Usecases-Url}}/v1/Services/:MessagingServiceSid/Compliance/Usa2p/Usecases?BrandRegistrationSid=BNd6cb729094F3348Ac0b6804b6e1b6D22",
+									"host": [
+										"{{v1-Services-MessagingServiceSid-Compliance-Usa2p-Usecases-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										":MessagingServiceSid",
+										"Compliance",
+										"Usa2p",
+										"Usecases"
+									],
+									"query": [
+										{
+											"key": "BrandRegistrationSid",
+											"value": "BNd6cb729094F3348Ac0b6804b6e1b6D22"
+										}
+									],
+									"variable": [
+										{
+											"key": "MessagingServiceSid",
+											"value": "MG75c0CbE9cAB89d7AEa7BDbff1fBdfdfA",
+											"description": "(Required) The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Usecase",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v1-Services-Usecases-Url}}/v1/Services/Usecases",
+							"host": [
+								"{{v1-Services-Usecases-Url}}"
+							],
+							"path": [
+								"v1",
+								"Services",
+								"Usecases"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v1-Services-Usecases-Url}}/v1/Services/Usecases",
+									"host": [
+										"{{v1-Services-Usecases-Url}}"
+									],
+									"path": [
+										"v1",
+										"Services",
+										"Usecases"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{AuthToken}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{AccountSid}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-ServiceSid-AlphaSenders-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-ServiceSid-AlphaSenders-Sid-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-a2p-BrandRegistrations-Sid-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-a2p-BrandRegistrations-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-a2p-BrandRegistrations-BrandSid-Vettings-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-a2p-BrandRegistrations-BrandSid-Vettings-BrandVettingSid-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Deactivations-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-PreregisteredUsa2p-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-ServiceSid-PhoneNumbers-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-ServiceSid-PhoneNumbers-Sid-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-Sid-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-ServiceSid-ShortCodes-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-ServiceSid-ShortCodes-Sid-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-MessagingServiceSid-Compliance-Usa2p-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-MessagingServiceSid-Compliance-Usa2p-Sid-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-MessagingServiceSid-Compliance-Usa2p-Usecases-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v1-Services-Usecases-Url",
+			"value": "https://messaging.twilio.com",
+			"type": "string"
+		}
+	]
+}

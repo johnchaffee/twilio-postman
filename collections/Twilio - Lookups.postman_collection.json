@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "7727bdc4-e7f8-4abd-b689-06893240ed2c",
+		"name": "Twilio - Lookups",
+		"description": "This is the public Twilio REST API.\n\nContact Support:\n Name: Twilio Support\n Email: support@twilio.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1060316"
+	},
+	"item": [
+		{
+			"name": "Phone Number Lookup",
+			"item": [
+				{
+					"name": "Fetch Phone Number",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{v2-PhoneNumbers-PhoneNumber-Url}}/v2/PhoneNumbers/:PhoneNumber?Fields=caller_name,sim_swap,call_forwarding,live_activity,line_type_intelligence",
+							"host": [
+								"{{v2-PhoneNumbers-PhoneNumber-Url}}"
+							],
+							"path": [
+								"v2",
+								"PhoneNumbers",
+								":PhoneNumber"
+							],
+							"query": [
+								{
+									"key": "Fields",
+									"value": "caller_name,sim_swap,call_forwarding,live_activity,line_type_intelligence",
+									"description": "A comma-separated list of fields to return. Possible values are `caller_name`, `sim_swap`, `call_forwarding`, `live_activity`, `line_type_intelligence`."
+								},
+								{
+									"key": "CountryCode",
+									"value": "magna in cillum",
+									"description": "The [country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) used if the phone number provided is in national format.",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "PhoneNumber",
+									"value": "",
+									"description": "(Required) The phone number to lookup in E.164 or national format. Default country code is +1 (North America)."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{v2-PhoneNumbers-PhoneNumber-Url}}/v2/PhoneNumbers/:PhoneNumber?Fields=magna in cillum&CountryCode=magna in cillum",
+									"host": [
+										"{{v2-PhoneNumbers-PhoneNumber-Url}}"
+									],
+									"path": [
+										"v2",
+										"PhoneNumbers",
+										":PhoneNumber"
+									],
+									"query": [
+										{
+											"key": "Fields",
+											"value": "magna in cillum"
+										},
+										{
+											"key": "CountryCode",
+											"value": "magna in cillum"
+										}
+									],
+									"variable": [
+										{
+											"key": "PhoneNumber",
+											"value": "magna in cillum",
+											"description": "(Required) The phone number to lookup in E.164 or national format. Default country code is +1 (North America)."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"calling_country_code\": \"id esse\",\n  \"country_code\": \"reprehenderit sed in Excepteur\",\n  \"phone_number\": \"labore c\",\n  \"national_format\": \"ut dolor Duis officia\",\n  \"valid\": true,\n  \"validation_errors\": [\n    \"TOO_LONG\",\n    \"INVALID_BUT_POSSIBLE\"\n  ],\n  \"caller_name\": {},\n  \"sim_swap\": {},\n  \"call_forwarding\": {},\n  \"live_activity\": {},\n  \"line_type_intelligence\": {},\n  \"url\": \"http://tsxQeyaKfANQbblqPfzXkkLO.mwb8UokF4awUT3hiDw7uTTg\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{AuthToken}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{AccountSid}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://lookups.twilio.com",
+			"type": "string"
+		},
+		{
+			"key": "v2-PhoneNumbers-PhoneNumber-Url",
+			"value": "https://lookups.twilio.com",
+			"type": "string"
+		}
+	]
+}
