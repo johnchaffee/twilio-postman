@@ -36,7 +36,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{v2-PhoneNumbers-PhoneNumber-Url}}/v2/PhoneNumbers/:PhoneNumber?Fields=caller_name,sim_swap,call_forwarding,live_activity,line_type_intelligence",
+							"raw": "{{v2-PhoneNumbers-PhoneNumber-Url}}/v2/PhoneNumbers/:PhoneNumber",
 							"host": [
 								"{{v2-PhoneNumbers-PhoneNumber-Url}}"
 							],
@@ -48,12 +48,13 @@
 							"query": [
 								{
 									"key": "Fields",
-									"value": "caller_name,sim_swap,call_forwarding,live_activity,line_type_intelligence",
-									"description": "A comma-separated list of fields to return. Possible values are `caller_name`, `sim_swap`, `call_forwarding`, `live_activity`, `line_type_intelligence`."
+									"value": "",
+									"description": "A comma-separated list of fields to return. Possible values are `caller_name`, `sim_swap`, `call_forwarding`, `live_activity`, `line_type_intelligence`.",
+									"disabled": true
 								},
 								{
 									"key": "CountryCode",
-									"value": "magna in cillum",
+									"value": "",
 									"description": "The [country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) used if the phone number provided is in national format.",
 									"disabled": true
 								}
