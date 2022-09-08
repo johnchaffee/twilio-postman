@@ -20,7 +20,6 @@ Click one of the links below to download the Postman Collection.
 | Postman Collection                                                                    | Description                                         |
 | ------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | [Twilio - API](./collections/Twilio%20-%20API.postman_collection.json)                | Send messages and manage accounts and phone numbers |
-| [Twilio - API zip](./collections/Twilio%20-%20API.postman_collection.json.zip)        | Send messages and manage accounts and phone numbers |
 | [Twilio - Lookups](./collections/Twilio%20-%20API.postman_collection.json)            | Validate Phone Number formats and types             |
 | [Twilio - Verify](./collections/Twilio%20-%20API.postman_collection.json)             | Send and validate one-time-passcodes                |
 | [Twilio - Messaging Services](./collections/Twilio%20-%20API.postman_collection.json) | Manage Messaging Services and Number Pools          |
