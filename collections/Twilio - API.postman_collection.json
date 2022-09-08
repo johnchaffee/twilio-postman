@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "538ec187-e2a1-4d8e-8b1c-32dfcec0c95c",
+		"_postman_id": "dacc6f20-cb62-45d6-a8a7-579726547952",
 		"name": "Twilio - API",
 		"description": "This is the public Twilio REST API.\n\nContact Support:\n Name: Twilio Support\n Email: support@twilio.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -20438,6 +20438,21 @@
 				{
 					"name": "Create Message",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{AuthToken}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{AccountSid}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -20464,7 +20479,7 @@
 								},
 								{
 									"key": "Body",
-									"value": "Hello world",
+									"value": "",
 									"description": "The text of the message you want to send. Can be up to 1,600 characters in length."
 								},
 								{
